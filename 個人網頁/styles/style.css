@@ -73,17 +73,14 @@ main section.right {
       -ms-flex: 1 1 600px;
           flex: 1 1 600px;
   position: relative;
+  background-color: #e08958;
 }
 
 main section.right img {
-  border-radius: 50%;
-  max-width: 20vw;
-  height: 20vw;
+  max-width: 30vw;
   position: absolute;
-  top: 55vh;
-  right: 25vw;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 30vh;
+  right: 10vw;
 }
 
 main section.table {

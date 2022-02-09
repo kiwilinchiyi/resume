@@ -1,0 +1,177 @@
+$width: 5px;
+* {
+  // border: 1px black solid;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  .sidebar {
+    // background: white；
+    background: white;
+    width: 20%;
+    height: 90vh;
+    padding-top: 15px;
+    padding-left: 15px;
+    position: sticky;
+    top: 63px;
+    color: #d8a466;
+    h3 {
+      text-align: center;
+    }
+    ul {
+      margin-top: 30px;
+      padding-left: 0;
+      text-align: center;
+      li {
+        padding: 2.5px 0;
+        list-style: none;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $fontColor;
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+  }
+
+  .publish {
+    background: white;
+    width: 20%;
+    height: 90vh;
+    box-shadow: 2px 3px 27px -13px rgba(0, 0, 0, 0.39);
+    padding-top: 15px;
+    padding-left: 15px;
+    position: sticky;
+    top: 63px;
+    display: none;
+    h2 {
+      color: #d8a466;
+    }
+    .Forum-publish-form-select {
+      margin-left: 5%;
+      width: 90%;
+      max-width: 100%;
+      display: inline-block;
+      outline: none;
+      border-bottom: 1px solid #f8ac1e;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      .option:after {
+        position: absolute;
+        right: 20px;
+        top: 41%;
+      }
+      select {
+        border: none;
+        outline: none;
+        width: 100%;
+        text-align: center;
+        option {
+          border: none;
+          outline: none;
+          width: 70%;
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+    .Forum-publish-label-small-block {
+      display: flex;
+
+      .Forum-publish-label-small {
+        margin-right: 5%;
+        text-align: left;
+        // position: relative;
+      }
+      .Forum-publish-label-question-block {
+        // position: absolute;
+        // left: 30px;
+        // top: 0px;
+        // right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .situation {
+          display: none;
+        }
+        .AiFillQuestionCircle {
+          color: #f8ac1e;
+        }
+        &:hover {
+          .situation {
+            display: block;
+            font-size: 8px;
+          }
+        }
+      }
+    }
+
+    .Forum-publish-label-illustrator {
+      margin-left: 5%;
+      margin-right: 10%;
+      margin-top: 5%;
+      margin-bottom: 10%;
+      text-align: left;
+      display: block;
+    }
+    .Forum-publish-label-update-illustrator {
+      margin-left: 5%;
+      margin-right: 10%;
+      margin-top: 5%;
+      margin-bottom: 10%;
+      text-align: left;
+    }
+    .Forum-publish-label-update-illustrator-name {
+      display: inline-block;
+      background-color: red;
+    }
+
+    .Forum-publish-form-big {
+      margin-left: 5%;
+      width: 90%;
+      max-width: 100%;
+      height: 30px;
+      outline: none;
+      border-bottom: 1px solid #f8ac1e;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+    }
+    .Forum-publish-form-file {
+      display: none;
+    }
+    .Forum-publish-textarea {
+      margin-left: 5%;
+      width: 90%;
+      max-width: 100%;
+      height: 20vh;
+      min-height: 10vh;
+      display: inline-block;
+      outline: none;
+      border-bottom: 1px solid #f8ac1e;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      padding: 15px;
+      resize: none;
+    }
+    .Forum-publish-button-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .Forum-publish-button {
+        margin: 15px 5px;
+        font-weight: bolder;
+        color: $fontColor;
+      }
+    }
+  }
+}

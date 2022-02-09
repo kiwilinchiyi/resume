@@ -1,0 +1,41 @@
+.CollectionCourse {
+  height: $MemberCenterHeight;
+  //position: relative;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  .CollectionCourse-container {
+    height: 95%;
+    width: 100%;
+    //overflow: scroll;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    @include flex(column);
+    align-items: center;
+    //justify-content: center;
+    box-shadow: $MemberCenterShadow;
+    position: relative;
+
+    .CollectionCourse-container-header {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      border-left: $header-border;
+      width: 100%;
+
+      & h1 {
+        font-weight: 100;
+      }
+    }
+    .CollectionCourse-container-cards {
+      width: 100%;
+      position: relative;
+      margin: 0 0 1rem 0;
+      @include flex(row);
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow: scroll;
+    }
+  }
+}

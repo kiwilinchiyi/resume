@@ -1,0 +1,171 @@
+* {
+  // border: solid 1px black;
+  position: relative;
+  font-family: "microsoft jhenghei";
+  vertical-align: top;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.phone {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  width: 250px;
+  // 手機的白條
+  padding: 10px;
+  transition-duration: 0.5s;
+  // 讓wiggle動的時候不會一開始沒有class可以使用
+  left: 0;
+  .top {
+    height: 40px;
+    .camera {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: #333;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%, -50%);
+    }
+  }
+  .screen {
+    height: 350px;
+    transition-duration: 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+    .pages {
+      width: 100%;
+      height: 100%;
+      // nowrap讓裡面的內容不換行
+      white-space: nowrap;
+      font-size: 0px;
+      transition: 0.5s;
+      // 若原本沒有這個屬性的話，在screen被點擊時，是直接新增一個屬性，會跳動，因此先設好就不會跳動
+      left: 0px;
+      .page {
+        font-size: initial;
+        display: inline-block;
+        background-color: #333;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        // 讓padding往內縮不是往外
+        box-sizing: border-box;
+        position: relative;
+        white-space: normal;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: "";
+          display: block;
+          background-color: #ffab36;
+          height: 60px;
+          width: 100%;
+          // 加上絕對定位以後，就不需要margin:-10px
+          // margin: -10px;
+        }
+        &:after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: "";
+          display: block;
+          background-color: #ffab36;
+          height: 60px;
+          width: 100%;
+        }
+        h2 {
+          color: white;
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+      p {
+        color: #eee;
+        font-size: 12px;
+        margin-top: 30px;
+      }
+      .page1 {
+        background-color: #ffab36;
+        color: white;
+        h2 {
+          font-size: 20px;
+          margin-bottom: 0px;
+        }
+        h1 {
+          margin-top: 0px;
+          font-size: 30px;
+        }
+        .orange {
+          width: 300px;
+          height: 300px;
+          background-color: #ff9e17;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+  .bottom {
+    height: 60px;
+    .button {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 25px;
+      color: rgba(black, 0.4);
+      border: 1px solid rgba(black, 0.2);
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
+.status,
+.phonename {
+  color: white;
+  margin: 0;
+}
+.status {
+  font-size: 15px;
+  margin-top: 20px;
+}
+.phonename {
+  margin: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+  button {
+    background-color: transparent;
+    border: solid 1px rgba(#fff, 0.2);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+      color: #333;
+    }
+  }
+}

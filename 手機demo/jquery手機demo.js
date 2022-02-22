@@ -60,6 +60,7 @@ $(".button").click(function () {
 
 $(".turn").click(function () {
   $(".phone").css("transform", "rotate(360deg");
+  console.log("turnaround");
 });
 
 //震動設定，一開始些設定21，當觸及到wiggle得時候，
